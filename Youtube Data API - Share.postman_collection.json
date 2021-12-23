@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "6d48436c-4524-4eb6-988a-fda2f22b98dc",
+		"name": "Youtube Data API - Share",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Data API - V3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCKAG4vZ3tuT0xbJXUAF7v6g&channelType=any&key=API_KEY&maxResults=100",
+					"protocol": "https",
+					"host": [
+						"youtube",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "channelId",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g"
+						},
+						{
+							"key": "channelType",
+							"value": "any"
+						},
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "maxResults",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Get All Videos from a channel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/channels?id=UCKAG4vZ3tuT0xbJXUAF7v6g&key=API_KEY&part=contentDetails&maxResults=100",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"channels"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g"
+						},
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "contentDetails"
+						},
+						{
+							"key": "maxResults",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Validate API Key",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?key=API_KEY",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?key=API_KEY&part=snippet&type=video&maxResults=20",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "fields",
+							"value": "items(id,snippet(title))",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "random codez",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "video"
+						},
+						{
+							"key": "channelId",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "20"
+						},
+						{
+							"key": "order",
+							"value": "date",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Channels",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/channels?key=API_KEY&part=snippet,contentDetails,statistics&id=UCKAG4vZ3tuT0xbJXUAF7v6g",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"channels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet,contentDetails,statistics"
+						},
+						{
+							"key": "id",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g"
+						},
+						{
+							"key": "mine",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "managedByMe",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "date",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Playlists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/playlists?key=API_KEY&part=snippet,contentDetails&channelId=UCKAG4vZ3tuT0xbJXUAF7v6g",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet,contentDetails"
+						},
+						{
+							"key": "channelId",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g"
+						},
+						{
+							"key": "maxResults",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "date",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Playlist Items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/playlistItems?key=API_KEY&part=snippet&playlistId=PLqUX34SwGksRACojbmE8zNUq3Fpw3Y3WU",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"playlistItems"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "playlistId",
+							"value": "PLqUX34SwGksRACojbmE8zNUq3Fpw3Y3WU"
+						},
+						{
+							"key": "id",
+							"value": "UExxVVgzNFN3R2tzUkFDb2pibUU4ek5VcTNGcHczWTNXVS41NkI0NEY2RDEwNTU3Q0M2",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "50",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Comment Threads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/commentThreads?key=API_KEY&part=snippet,replies&videoId=9hHPaUiLWO4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"commentThreads"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet,replies"
+						},
+						{
+							"key": "channelId",
+							"value": "UCKAG4vZ3tuT0xbJXUAF7v6g",
+							"disabled": true
+						},
+						{
+							"key": "videoId",
+							"value": "9hHPaUiLWO4"
+						},
+						{
+							"key": "maxResults",
+							"value": "50",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/comments?key=API_KEY&part=snippet&parentId=UgyFLlIu9wpraJ8kyYZ4AaABAg",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "parentId",
+							"value": "UgyFLlIu9wpraJ8kyYZ4AaABAg",
+							"description": "commentThreadId"
+						},
+						{
+							"key": "id",
+							"value": "UgyFLlIu9wpraJ8kyYZ4AaABAg.9SlThL6PRtA9SmnYXnU021",
+							"description": "commentId",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "50",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Video Categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videoCategories?key=API_KEY&part=snippet&regionCode=IN",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videoCategories"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "regionCode",
+							"value": "IN"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data API V3 - Videos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos?key=API_KEY&part=snippet&id=9hHPaUiLWO4,6BOvaPG4Dkc,8kbyXDrRd34",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "API_KEY"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "id",
+							"value": "9hHPaUiLWO4",
+							"description": "commentId",
+							"disabled": true
+						},
+						{
+							"key": "maxResults",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "9hHPaUiLWO4,6BOvaPG4Dkc,8kbyXDrRd34"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
